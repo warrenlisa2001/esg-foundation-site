@@ -345,19 +345,18 @@
   .carousel-slide{ position:absolute; inset:0; display:flex; align-items:center; opacity:0; visibility:hidden; transition:opacity .7s ease; overflow:hidden; }
   .carousel-slide.is-active{ opacity:1; visibility:visible; }
   .carousel-slide.slide-foundation{ background:linear-gradient(120deg, #04140D, #0E8345 50%, #58E88A); }
-  .carousel-slide.slide-governance{ background:linear-gradient(120deg, #04140D, #146C43 50%, #6EE7A8); }
-  .carousel-slide.slide-climate{ background:linear-gradient(120deg, #04140D, #0F9D63 50%, #7CF0B0); }
-  .carousel-slide.slide-social{ background:linear-gradient(120deg, #04140D, #1E8E5A 50%, #A3F0C4); }
+  .carousel-slide.slide-governance{ background:linear-gradient(120deg, #0A1030, var(--signal-dark) 55%, var(--signal)); }
+  .carousel-slide.slide-climate{ background:linear-gradient(120deg, #0A1030, #3A2E7A 55%, var(--violet)); }
+  .carousel-slide.slide-social{ background:linear-gradient(120deg, #0A1030, #7a5310 55%, var(--amber)); }
   .carousel-content{ position:relative; z-index:2; max-width:680px; }
   @keyframes heroAuroraDrift{
     0%{ background-position:62% 8%, 96% 38%, 66% 96%, 100% 68%; }
     100%{ background-position:74% 16%, 88% 48%, 78% 84%, 90% 58%; }
   }
-  .carousel-slide::before{ content:""; position:absolute; inset:-45%; z-index:0; background:radial-gradient(circle, #22C55E 0%, transparent 62%), radial-gradient(circle, #86EFAC 0%, transparent 62%), radial-gradient(circle, #A3E635 0%, transparent 62%), radial-gradient(circle, #0D9488 0%, transparent 62%); background-repeat:no-repeat; background-size:65% 65%; background-position:62% 8%, 96% 38%, 66% 96%, 100% 68%; filter:blur(55px); opacity:.65; mix-blend-mode:screen; animation:heroAuroraDrift 28s ease-in-out infinite alternate; pointer-events:none; }
+  .carousel-slide::before{ content:""; position:absolute; inset:-45%; z-index:0; background:radial-gradient(circle, var(--ocean) 0%, transparent 62%), radial-gradient(circle, var(--garnet) 0%, transparent 62%), radial-gradient(circle, var(--violet) 0%, transparent 62%), radial-gradient(circle, var(--amber) 0%, transparent 62%); background-repeat:no-repeat; background-size:65% 65%; background-position:62% 8%, 96% 38%, 66% 96%, 100% 68%; filter:blur(55px); opacity:.5; mix-blend-mode:screen; animation:heroAuroraDrift 28s ease-in-out infinite alternate; pointer-events:none; }
   .carousel-content{ position:relative; z-index:2; max-width:680px; }
-  .carousel-content::before{ content:""; position:absolute; inset:-24px -32px -24px -320px; background:linear-gradient(90deg, rgba(4,20,13,.78) 55%, transparent); z-index:-1; pointer-events:none; }
+  .carousel-content::before{ content:""; position:absolute; inset:-24px -32px -24px -320px; background:linear-gradient(90deg, rgba(10,16,48,.75) 55%, transparent); z-index:-1; pointer-events:none; }
   .carousel-slide .grain{ z-index:1; }
-  .carousel-content .eyebrow::before{ background:#86EFAC; }
   .carousel-content h1{ color:#fff; font-size:2.5rem; margin:10px 0 14px; }
   .carousel-content p{ color:rgba(245,246,242,.85); font-size:1.05rem; max-width:600px; margin-bottom:16px; }
   .carousel-content .tag{ margin-bottom:16px; }
@@ -450,7 +449,7 @@
       <a class="carousel-slide slide-foundation is-active" href="keeping-current/showcase-adds-40-reports-q3.html">
         <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="hcn1"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#hcn1)"/></svg>
         <div class="container carousel-content">
-          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex; color:#86EFAC;">Environmental, Social &amp; Corporate Governance</span>
+          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex;">Environmental, Social &amp; Corporate Governance</span>
           <span class="tag" style="background:rgba(245,246,242,.16); color:#fff;">Foundation</span>
           <h1>ESG Foundation Adds 40 New Reports to the Showcase This Quarter</h1>
           <p>The free public library now spans ten industries, with the largest quarterly intake since the Showcase launched.</p>
@@ -460,7 +459,7 @@
       <a class="carousel-slide slide-governance" href="keeping-current/board-oversight-disclosure-gcc.html">
         <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="hcn2"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#hcn2)"/></svg>
         <div class="container carousel-content">
-          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex; color:#86EFAC;">Governance</span>
+          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex;">Governance</span>
           <span class="tag" style="background:rgba(245,246,242,.16); color:#fff;">Governance</span>
           <h1>Board Oversight of ESG Now Disclosed by Most GCC-Listed Majors, Benchmark Finds</h1>
           <p>A growing share of large-cap disclosure now names the board committee responsible for sustainability oversight, GCC ESG Benchmark data shows.</p>
@@ -470,7 +469,7 @@
       <a class="carousel-slide slide-climate" href="keeping-current/scope-3-lags-scope-1-2.html">
         <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="hcn3"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#hcn3)"/></svg>
         <div class="container carousel-content">
-          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex; color:#86EFAC;">Climate</span>
+          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex;">Climate</span>
           <span class="tag" style="background:rgba(245,246,242,.16); color:#fff;">Climate</span>
           <h1>Scope 3 Reporting Still Lags Behind Scope 1 and 2, Showcase Analysis Shows</h1>
           <p>Most reports in the Showcase now disclose direct and energy emissions in full. Value-chain emissions remain the exception.</p>
@@ -480,7 +479,7 @@
       <a class="carousel-slide slide-social" href="keeping-current/supply-chain-labour-audits-standard.html">
         <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="hcn4"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#hcn4)"/></svg>
         <div class="container carousel-content">
-          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex; color:#86EFAC;">Social</span>
+          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex;">Social</span>
           <span class="tag" style="background:rgba(245,246,242,.16); color:#fff;">Social</span>
           <h1>Supply-Chain Labour Audits Becoming Standard Practice Among Large Manufacturers</h1>
           <p>Third-party labour audits of tier-one suppliers now appear in a majority of manufacturing-sector reports reviewed for the Showcase.</p>
@@ -490,7 +489,7 @@
       <a class="carousel-slide slide-foundation" href="keeping-current/2026-awards-nominations-open.html">
         <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="hcn5"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#hcn5)"/></svg>
         <div class="container carousel-content">
-          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex; color:#86EFAC;">Awards</span>
+          <span class="eyebrow on-dark" style="margin-bottom:14px; display:inline-flex;">Awards</span>
           <span class="tag" style="background:rgba(245,246,242,.16); color:#fff;">Foundation</span>
           <h1>ESG Foundation Opens Nominations for the 2026 ESG Foundation Awards</h1>
           <p>The annual programme recognises credible, well-evidenced ESG disclosure and practice. Nominations are free and open to any organisation in the Showcase.</p>
