@@ -1,0 +1,1231 @@
+```html
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Method | ESG Foundation</title>
+  <meta name="description" content="The method behind the ESG Foundation public record: how we collect, assess, source and publish ESG data, including gaps in disclosure.">
+  <link rel="canonical" href="https://esgfoundation.org/method.html">
+
+  <meta property="og:title" content="Method | ESG Foundation">
+  <meta property="og:description" content="How ESG Foundation collects, assesses and publishes ESG data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://esgfoundation.org/method.html">
+  <meta property="og:image" content="https://esgfoundation.org/assets/img/og-default.png">
+
+  <link rel="stylesheet" href="assets/css/esgf-brand.css">
+
+  <style>
+    .method-hero {
+      padding: 96px 0 80px;
+      background: var(--esgf-surface);
+      border-bottom: 1px solid var(--esgf-rule);
+    }
+
+    .method-hero__copy {
+      grid-column: 1 / span 8;
+    }
+
+    .method-hero__aside {
+      grid-column: 10 / span 3;
+      align-self: end;
+    }
+
+    .method-section {
+      padding: 96px 0;
+    }
+
+    .method-section--paper {
+      background: var(--esgf-paper);
+    }
+
+    .method-section--white {
+      background: var(--esgf-surface);
+    }
+
+    .method-intro {
+      grid-column: 1 / span 8;
+    }
+
+    .method-aside {
+      grid-column: 10 / span 3;
+    }
+
+    .method-copy {
+      max-width: 72ch;
+    }
+
+    .method-copy p {
+      margin: 0 0 20px;
+    }
+
+    .method-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .method-list {
+      margin: 32px 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--esgf-rule);
+    }
+
+    .method-list li {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--esgf-rule);
+    }
+
+    .method-list__term {
+      font-family: var(--esgf-font-display);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--esgf-ink);
+    }
+
+    .method-list__text {
+      color: var(--esgf-slate);
+    }
+
+    .method-table {
+      width: 100%;
+      margin-top: 40px;
+      border-collapse: collapse;
+      background: var(--esgf-surface);
+      border: 1px solid var(--esgf-rule);
+    }
+
+    .method-table th,
+    .method-table td {
+      padding: 18px 20px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--esgf-rule);
+    }
+
+    .method-table th {
+      color: var(--esgf-ink);
+      font-family: var(--esgf-font-display);
+      font-size: 16px;
+      font-weight: 700;
+      background: var(--esgf-paper);
+    }
+
+    .method-table td {
+      color: var(--esgf-slate);
+    }
+
+    .method-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .method-table .status {
+      white-space: nowrap;
+      font-family: var(--esgf-font-text);
+      font-weight: 600;
+    }
+
+    .method-table .status--verified {
+      color: var(--esgf-depth);
+    }
+
+    .method-table .status--estimated {
+      color: var(--esgf-flag);
+    }
+
+    .method-table .status--disputed {
+      color: var(--esgf-alert);
+    }
+
+    .method-table .status--nodata {
+      color: var(--esgf-slate);
+    }
+
+    .method-callout {
+      padding: 32px;
+      background: var(--esgf-ink);
+      color: #fff;
+      border-radius: var(--esgf-radius-md);
+    }
+
+    .method-callout h3 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-family: var(--esgf-font-display);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+    }
+
+    .method-callout p {
+      margin: 0;
+      color: rgba(255,255,255,.78);
+    }
+
+    .method-number {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--esgf-depth);
+      font-family: var(--esgf-font-mono);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .method-principles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .method-principle {
+      padding: 28px;
+      background: var(--esgf-surface);
+      border: 1px solid var(--esgf-rule);
+      border-radius: var(--esgf-radius-md);
+    }
+
+    .method-principle h3 {
+      margin: 0 0 12px;
+      color: var(--esgf-ink);
+      font-family: var(--esgf-font-display);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -.015em;
+      line-height: 1.25;
+    }
+
+    .method-principle p {
+      margin: 0;
+      color: var(--esgf-slate);
+    }
+
+    .method-steps {
+      counter-reset: method-step;
+      margin: 48px 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--esgf-rule);
+    }
+
+    .method-step {
+      counter-increment: method-step;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--esgf-rule);
+    }
+
+    .method-step::before {
+      content: counter(method-step, decimal-leading-zero);
+      color: var(--esgf-depth);
+      font-family: var(--esgf-font-mono);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .method-step h3 {
+      margin: 0 0 8px;
+      color: var(--esgf-ink);
+      font-family: var(--esgf-font-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -.015em;
+      line-height: 1.25;
+    }
+
+    .method-step p {
+      max-width: 72ch;
+      margin: 0;
+      color: var(--esgf-slate);
+    }
+
+    .method-source-box {
+      margin-top: 40px;
+      padding: 24px;
+      border: 1px solid var(--esgf-rule);
+      border-radius: var(--esgf-radius-md);
+      background: var(--esgf-surface);
+    }
+
+    .method-source-box strong {
+      color: var(--esgf-ink);
+    }
+
+    .method-source-box p {
+      margin: 8px 0 0;
+      color: var(--esgf-slate);
+    }
+
+    .method-gap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .method-gap__item {
+      padding: 32px;
+      border: 1px solid var(--esgf-rule);
+      border-radius: var(--esgf-radius-md);
+      background: var(--esgf-surface);
+    }
+
+    .method-gap__item h3 {
+      margin: 0 0 12px;
+      font-family: var(--esgf-font-display);
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .method-gap__item p {
+      margin: 0;
+      color: var(--esgf-slate);
+    }
+
+    .method-version {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--esgf-rule);
+      color: var(--esgf-mist);
+      font-family: var(--esgf-font-mono);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .method-hero__copy,
+      .method-hero__aside,
+      .method-intro,
+      .method-aside {
+        grid-column: 1 / -1;
+      }
+
+      .method-principles {
+        grid-template-columns: 1fr;
+      }
+
+      .method-gap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .method-list li {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .method-step {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .method-callout {
+        padding: 24px;
+      }
+
+      .method-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="esgf-header">
+    <div class="esgf-container esgf-header__inner">
+
+      <a class="esgf-brand" href="index.html" aria-label="ESG Foundation home">
+        <img src="assets/img/og-default.png" alt="ESG Foundation">
+      </a>
+
+      <nav class="esgf-nav" aria-label="Main navigation">
+        <a href="gcc-benchmark.html">Record</a>
+        <a href="method.html" aria-current="page">Method</a>
+        <a href="reports-showcase.html">Research</a>
+        <a href="about.html">About</a>
+        <a class="esgf-nav__search" href="gcc-benchmark.html">Search data</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="method-hero">
+      <div class="esgf-container esgf-grid">
+
+        <div class="method-hero__copy">
+
+          <p class="esgf-eyebrow">Method</p>
+
+          <h1 class="esgf-display">
+            The method behind the record.
+          </h1>
+
+          <p class="esgf-lead">
+            ESG data is only useful when you can see where it came from,
+            understand how it was treated, and identify what is missing.
+          </p>
+
+          <div class="esgf-hero__actions">
+            <a class="esgf-button" href="gcc-benchmark.html">
+              Search the record
+            </a>
+
+            <a class="esgf-button esgf-button--secondary" href="about.html">
+              About the Foundation
+            </a>
+          </div>
+
+          <div class="esgf-gradient-rule"></div>
+
+        </div>
+
+        <aside class="method-hero__aside">
+
+          <div class="method-callout">
+
+            <h3>
+              The rule is simple.
+            </h3>
+
+            <p>
+              If the data exists, show the source.
+              If the data is estimated, say so.
+              If the data is disputed, say so.
+              If the data does not exist, publish the gap.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- PURPOSE -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container esgf-grid">
+
+        <div class="method-intro">
+
+          <p class="esgf-eyebrow">01 / Purpose</p>
+
+          <h2 class="esgf-h2">
+            Build an open record, not another black box.
+          </h2>
+
+          <div class="method-copy esgf-lead">
+
+            <p>
+              ESG Foundation is a non-profit knowledge base for environmental,
+              social and governance data. We aggregate disclosures, filings
+              and public reporting from across the ESG field, publish the
+              method we use to do it, and make the record free to read.
+            </p>
+
+            <p>
+              The Foundation is designed around evidence and provenance.
+              A number without a source is not a useful public record.
+              A missing number should not be silently filled with an assumption.
+            </p>
+
+            <p>
+              Our method therefore puts the source, date, treatment and status
+              of the information alongside the record wherever possible.
+            </p>
+
+          </div>
+
+        </div>
+
+        <aside class="method-aside">
+
+          <p class="esgf-eyebrow">In practice</p>
+
+          <div class="method-source-box">
+
+            <span class="esgf-mono">RECORD PRINCIPLE</span>
+
+            <p>
+              <strong>Source first.</strong><br>
+              Every published figure should be traceable to the evidence
+              used to record it.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- PRINCIPLES -->
+    <section class="method-section method-section--paper">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">02 / Principles</p>
+
+        <h2 class="esgf-h2">
+          Four principles govern the record.
+        </h2>
+
+        <div class="method-principles">
+
+          <article class="method-principle">
+
+            <span class="method-number">01</span>
+
+            <h3>Evidence over assertion</h3>
+
+            <p>
+              We distinguish disclosed information from claims, commentary
+              and unsupported statements. Company statements remain attributable
+              to the company that made them.
+            </p>
+
+          </article>
+
+          <article class="method-principle">
+
+            <span class="method-number">02</span>
+
+            <h3>Provenance is part of the data</h3>
+
+            <p>
+              Source, publication date and relevant identifiers are retained
+              with the record so that users can understand where information
+              came from.
+            </p>
+
+          </article>
+
+          <article class="method-principle">
+
+            <span class="method-number">03</span>
+
+            <h3>Gaps remain visible</h3>
+
+            <p>
+              Where an organisation does not disclose a relevant indicator,
+              the record can show no data rather than inventing completeness.
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="method-principles">
+
+          <article class="method-principle">
+
+            <span class="method-number">04</span>
+
+            <h3>Corrections stay possible</h3>
+
+            <p>
+              ESG records change. New disclosures, corrections and evidence
+              can change what is recorded. The method therefore supports
+              review and correction rather than treating a published record
+              as permanently fixed.
+            </p>
+
+          </article>
+
+          <article class="method-principle">
+
+            <span class="method-number">05</span>
+
+            <h3>Comparable does not mean identical</h3>
+
+            <p>
+              Definitions, reporting boundaries, periods and methodologies
+              can differ between organisations. Those differences should be
+              visible before numbers are compared.
+            </p>
+
+          </article>
+
+          <article class="method-principle">
+
+            <span class="method-number">06</span>
+
+            <h3>Method before judgement</h3>
+
+            <p>
+              The Foundation publishes the evidence and treatment used to
+              construct the record. It does not sell a score as a substitute
+              for the underlying evidence.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EVIDENCE -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">03 / Evidence</p>
+
+        <h2 class="esgf-h2">
+          What counts as evidence?
+        </h2>
+
+        <p class="esgf-lead">
+          The record can contain information from different public sources.
+          The source type matters, and so does the context in which a statement
+          was made.
+        </p>
+
+        <ul class="method-list">
+
+          <li>
+            <div class="method-list__term">
+              Regulatory filings
+            </div>
+            <div class="method-list__text">
+              Formal filings and regulatory disclosures are treated as primary
+              evidence for the information they contain.
+            </div>
+          </li>
+
+          <li>
+            <div class="method-list__term">
+              Company disclosures
+            </div>
+            <div class="method-list__text">
+              Annual reports, sustainability reports, ESG disclosures and
+              other published company materials may provide evidence of
+              reported performance, policy or commitments.
+            </div>
+          </li>
+
+          <li>
+            <div class="method-list__term">
+              Official sources
+            </div>
+            <div class="method-list__text">
+              Government departments, regulators, standards bodies and other
+              official sources may provide relevant data, definitions,
+              requirements and contextual evidence.
+            </div>
+          </li>
+
+          <li>
+            <div class="method-list__term">
+              Research
+            </div>
+            <div class="method-list__text">
+              Academic research, institutional research and published studies
+              may provide contextual or comparative evidence. Their methods
+              and limitations remain relevant to interpretation.
+            </div>
+          </li>
+
+          <li>
+            <div class="method-list__term">
+              Public reporting
+            </div>
+            <div class="method-list__text">
+              Reputable public reporting may be recorded as a source of
+              information or context. Reporting is not automatically treated
+              as equivalent to a primary disclosure.
+            </div>
+          </li>
+
+          <li>
+            <div class="method-list__term">
+              Company claims
+            </div>
+            <div class="method-list__text">
+              Claims made by an organisation are identified as claims.
+              They are not silently converted into independently verified facts.
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- RECORD STATUS -->
+    <section class="method-section method-section--paper">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">04 / Record status</p>
+
+        <h2 class="esgf-h2">
+          Every data point needs a status.
+        </h2>
+
+        <p class="esgf-lead">
+          Status tells the reader how the information should be understood.
+          It prevents an estimated or disputed figure from appearing identical
+          to a directly sourced disclosure.
+        </p>
+
+        <table class="method-table">
+
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Meaning</th>
+              <th>What the reader should understand</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="status status--verified">
+                Verified source
+              </td>
+              <td>
+                The recorded information is supported by an identified source
+                and has been checked against the applicable evidence.
+              </td>
+              <td>
+                The source is available for inspection.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="status status--estimated">
+                Estimated
+              </td>
+              <td>
+                The figure is an estimate rather than a directly disclosed
+                value. The treatment should be identifiable in the record.
+              </td>
+              <td>
+                Do not treat the figure as a directly reported disclosure.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="status status--disputed">
+                Disputed
+              </td>
+              <td>
+                Relevant evidence or claims conflict, have been challenged,
+                withdrawn or otherwise require qualification.
+              </td>
+              <td>
+                The disagreement or qualification should remain visible.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="status status--nodata">
+                No data
+              </td>
+              <td>
+                No suitable public disclosure has been identified for the
+                relevant indicator and reporting period.
+              </td>
+              <td>
+                Absence of data is itself part of the public record.
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">05 / Process</p>
+
+        <h2 class="esgf-h2">
+          From source to published record.
+        </h2>
+
+        <p class="esgf-lead">
+          The Foundation's process is designed to preserve provenance while
+          making a large public record practical to maintain.
+        </p>
+
+        <ol class="method-steps">
+
+          <li class="method-step">
+
+            <div>
+              <h3>Identify</h3>
+              <p>
+                Relevant disclosures, filings, research, official sources and
+                public reporting are identified for the subject and indicator
+                being recorded.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="method-step">
+
+            <div>
+              <h3>Classify</h3>
+              <p>
+                The information is classified by source type, topic, geography,
+                reporting period and relevance to the ESG record.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="method-step">
+
+            <div>
+              <h3>Check</h3>
+              <p>
+                The source and relevant evidence are reviewed for consistency,
+                date, scope, definition and other factors that could change
+                how the information should be interpreted.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="method-step">
+
+            <div>
+              <h3>Record</h3>
+              <p>
+                The information is entered with its source, date, status and
+                relevant contextual information rather than as an isolated
+                number.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="method-step">
+
+            <div>
+              <h3>Review</h3>
+              <p>
+                Information requiring additional judgement, qualification or
+                correction is subject to human review before it is treated as
+                part of the published record.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="method-step">
+
+            <div>
+              <h3>Publish</h3>
+              <p>
+                The public record presents the available evidence, its status
+                and relevant source information. Where suitable evidence is
+                absent, the gap remains visible.
+              </p>
+            </div>
+
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- AI AND AUTOMATION -->
+    <section class="method-section method-section--paper">
+      <div class="esgf-container esgf-grid">
+
+        <div class="method-intro">
+
+          <p class="esgf-eyebrow">06 / AI and automation</p>
+
+          <h2 class="esgf-h2">
+            Machines can process the record. They do not replace the method.
+          </h2>
+
+          <div class="method-copy esgf-lead">
+
+            <p>
+              The Foundation is designed to be machine-readable and capable
+              of processing information at scale. Automated systems can help
+              identify sources, classify material, detect duplicates, extract
+              relevant information and flag records for review.
+            </p>
+
+            <p>
+              Automation does not turn an unsupported statement into evidence.
+              It does not remove the need for provenance, status or human review
+              where interpretation is required.
+            </p>
+
+            <p>
+              The objective is a record that machines can query and people can
+              inspect.
+            </p>
+
+          </div>
+
+        </div>
+
+        <aside class="method-aside">
+
+          <div class="method-callout">
+
+            <h3>
+              Machine-first does not mean machine-only.
+            </h3>
+
+            <p>
+              Automation helps us process information.
+              The published record still needs evidence, provenance and
+              visible uncertainty.
+
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- GAPS -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">07 / Missing data</p>
+
+        <h2 class="esgf-h2">
+          We do not fill the gaps to make the record look complete.
+        </h2>
+
+        <p class="esgf-lead">
+          Missing disclosure is common across ESG reporting. The method treats
+          absence of suitable public evidence differently from a measured zero.
+        </p>
+
+        <div class="method-gap">
+
+          <article class="method-gap__item">
+
+            <h3>
+              No disclosure
+            </h3>
+
+            <p>
+              No suitable public source has been identified for the relevant
+              indicator and period. The record shows <strong>no data</strong>.
+            </p>
+
+          </article>
+
+          <article class="method-gap__item">
+
+            <h3>
+              Zero
+            </h3>
+
+            <p>
+              A zero should only be recorded when the underlying source actually
+              reports or supports a zero value. Zero is not the same as missing.
+            </p>
+
+          </article>
+
+          <article class="method-gap__item">
+
+            <h3>
+              Estimate
+            </h3>
+
+            <p>
+              Where an estimate is used, it must be identified as an estimate.
+              Estimated information is not presented as directly disclosed data.
+            </p>
+
+          </article>
+
+          <article class="method-gap__item">
+
+            <h3>
+              Conflicting evidence
+            </h3>
+
+            <p>
+              Where relevant sources conflict, the conflict should be recorded
+              and qualified rather than silently selecting the more convenient
+              figure.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- COMPARABILITY -->
+    <section class="method-section method-section--paper">
+      <div class="esgf-container esgf-grid">
+
+        <div class="method-intro">
+
+          <p class="esgf-eyebrow">08 / Comparability</p>
+
+          <h2 class="esgf-h2">
+            A number is not comparable simply because it has the same label.
+          </h2>
+
+          <div class="method-copy esgf-lead">
+
+            <p>
+              ESG indicators can differ in definition, organisational boundary,
+              geography, reporting period, methodology and assurance.
+              Those differences matter.
+            </p>
+
+            <p>
+              Before comparing records, users should consider whether the
+              underlying definitions and reporting boundaries are sufficiently
+              aligned for the comparison being made.
+            </p>
+
+            <p>
+              The Foundation's role is to make the underlying record visible.
+              Users remain responsible for the conclusions they draw from it.
+            </p>
+
+          </div>
+
+        </div>
+
+        <aside class="method-aside">
+
+          <div class="method-source-box">
+
+            <span class="esgf-mono">CHECK BEFORE COMPARING</span>
+
+            <p>
+              Reporting period<br>
+              Organisational boundary<br>
+              Geography<br>
+              Indicator definition<br>
+              Methodology<br>
+              Assurance or verification
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- CORRECTIONS -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">09 / Corrections</p>
+
+        <h2 class="esgf-h2">
+          The record can change when the evidence changes.
+        </h2>
+
+        <p class="esgf-lead">
+          A public data record should be correctable. New disclosures,
+          corrected filings, withdrawn statements or better source evidence
+          may require a record to be updated.
+        </p>
+
+        <div class="method-list">
+
+          <div class="method-list li">
+            <div class="method-list__term">
+              New evidence
+            </div>
+            <div class="method-list__text">
+              A newly published primary source may update or add to a record.
+            </div>
+          </div>
+
+          <div class="method-list li">
+            <div class="method-list__term">
+              Correction
+            </div>
+            <div class="method-list__text">
+              Where a source corrects previously published information, the
+              record should reflect the corrected evidence.
+            </div>
+          </div>
+
+          <div class="method-list li">
+            <div class="method-list__term">
+              Withdrawal
+            </div>
+            <div class="method-list__text">
+              Withdrawn or disputed information should not remain presented
+              without the relevant qualification.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="method-source-box">
+
+          <strong>
+            Method and record changes should remain distinguishable.
+          </strong>
+
+          <p>
+            A change to the Foundation's methodology is different from a change
+            to an individual record because new evidence has appeared.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SCOPE -->
+    <section class="method-section method-section--paper">
+      <div class="esgf-container esgf-grid">
+
+        <div class="method-intro">
+
+          <p class="esgf-eyebrow">10 / Scope</p>
+
+          <h2 class="esgf-h2">
+            What the Foundation is — and what it is not.
+          </h2>
+
+          <div class="method-copy esgf-lead">
+
+            <p>
+              ESG Foundation is an open knowledge base and public record for
+              ESG information.
+            </p>
+
+            <p>
+              We aggregate information, document sources, publish our method
+              and make the public record free to read.
+            </p>
+
+            <p>
+              The Foundation is not a certifier, campaigner, seal or substitute
+              for a regulator, auditor, ratings agency or professional adviser.
+            </p>
+
+            <p>
+              The public record is intended to make evidence easier to find,
+              inspect and understand — not to remove the need for professional
+              judgement where it is required.
+            </p>
+
+          </div>
+
+        </div>
+
+        <aside class="method-aside">
+
+          <div class="method-callout">
+
+            <h3>
+              Open record.
+            </h3>
+
+            <p>
+              The method is public because the way data is assembled matters
+              as much as the data itself.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="method-section method-section--white">
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">Method statement</p>
+
+        <h2 class="esgf-h2">
+          The record should show what is known — and what is not.
+        </h2>
+
+        <p class="esgf-lead">
+          That is the standard we are building towards: source-linked data,
+          visible treatment, explicit uncertainty and no manufactured
+          completeness.
+        </p>
+
+        <div class="esgf-gradient-rule"></div>
+
+        <div class="method-version">
+          Method version 1.0 · September 2026 · ESG Foundation
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="esgf-footer">
+
+    <div class="esgf-container">
+
+      <div class="esgf-footer__brand">
+        ESG Foundation
+      </div>
+
+      <p>
+        Non-profit ESG knowledge base. We aggregate the data,
+        publish the method, and show the gaps. Free to read.
+      </p>
+
+      <p class="esgf-mono">
+        esgfoundation.org · 2026
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
+```
