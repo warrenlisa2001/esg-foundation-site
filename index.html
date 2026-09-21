@@ -1,410 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ESG Foundation — The open record for ESG data</title>
-
-  <meta name="description" content="ESG Foundation is a non-profit knowledge base for environmental, social and governance data. We aggregate disclosures, filings and public reporting, publish the method, and show the gaps.">
-  <meta name="robots" content="index, follow">
-
+  <title>ESG Foundation | The open record for ESG data</title>
+  <meta name="description" content="ESG Foundation is a non-profit knowledge base for environmental, social and governance data. We aggregate the data, publish the method, and show the gaps.">
   <link rel="canonical" href="https://esgfoundation.org/">
 
-  <meta property="og:title" content="ESG Foundation — The open record for ESG data">
+  <meta property="og:title" content="ESG Foundation | The open record for ESG data">
   <meta property="og:description" content="We aggregate ESG data, publish the method, and show the gaps. Free to read.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://esgfoundation.org/">
   <meta property="og:image" content="https://esgfoundation.org/assets/img/og-default.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ESG Foundation — The open record for ESG data">
-  <meta name="twitter:description" content="The open record for ESG data.">
-  <meta name="twitter:image" content="https://esgfoundation.org/assets/img/og-default.png">
-
   <link rel="stylesheet" href="assets/css/esgf-brand.css">
-
-  <style>
-    /* =========================================================
-       ESG Foundation — Homepage-specific styles
-       ========================================================= */
-
-    .esgf-hero__copy {
-      grid-column: 1 / span 7;
-    }
-
-    .esgf-hero__data {
-      grid-column: 9 / span 4;
-    }
-
-    .esgf-hero__intro {
-      max-width: 720px;
-    }
-
-    .esgf-hero__copy .esgf-display {
-      max-width: 720px;
-    }
-
-    .esgf-hero__support {
-      max-width: 620px;
-      margin-top: 24px;
-      color: var(--esgf-slate);
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-    .esgf-search-label {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--esgf-slate);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .esgf-hero-record {
-      padding: 24px;
-      border: 1px solid var(--esgf-rule);
-      border-radius: var(--esgf-radius-md);
-      background: var(--esgf-paper);
-    }
-
-    .esgf-hero-record__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .esgf-hero-record__name {
-      margin: 0;
-      color: var(--esgf-ink);
-      font-family: var(--esgf-font-display);
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .esgf-hero-record__score {
-      color: var(--esgf-ink);
-      font-family: var(--esgf-font-mono);
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .esgf-hero-record__rows {
-      border-top: 1px solid var(--esgf-rule);
-    }
-
-    .esgf-hero-record__row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--esgf-rule);
-    }
-
-    .esgf-hero-record__row:last-child {
-      border-bottom: 0;
-    }
-
-    .esgf-hero-record__label {
-      color: var(--esgf-slate);
-      font-size: 13px;
-    }
-
-    .esgf-hero-record__value {
-      color: var(--esgf-ink);
-      font-family: var(--esgf-font-mono);
-      font-size: 13px;
-      text-align: right;
-    }
-
-    .esgf-data-strip__grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .esgf-data-strip__item {
-      padding: 32px 24px;
-    }
-
-    .esgf-data-strip__item:first-child {
-      padding-left: 0;
-    }
-
-    .esgf-section-intro {
-      max-width: 720px;
-      margin-bottom: 48px;
-    }
-
-    .esgf-section-intro .esgf-lead {
-      margin-top: 16px;
-    }
-
-    .esgf-two-column {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .esgf-evidence-card {
-      padding: 32px;
-      border: 1px solid var(--esgf-rule);
-      border-radius: var(--esgf-radius-md);
-      background: var(--esgf-surface);
-    }
-
-    .esgf-evidence-card__number {
-      margin-bottom: 24px;
-      color: var(--esgf-depth);
-      font-family: var(--esgf-font-mono);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .esgf-evidence-card p {
-      max-width: 58ch;
-      margin: 16px 0 0;
-      color: var(--esgf-slate);
-    }
-
-    .esgf-record-preview {
-      background: var(--esgf-surface);
-    }
-
-    .esgf-record-preview__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-
-    .esgf-record-preview__header p {
-      max-width: 52ch;
-      margin: 8px 0 0;
-      color: var(--esgf-slate);
-    }
-
-    .esgf-record-link {
-      flex-shrink: 0;
-    }
-
-    .esgf-gap-panel {
-      padding: 48px;
-      border-radius: var(--esgf-radius-lg);
-      background: var(--esgf-ink);
-      color: #fff;
-    }
-
-    .esgf-gap-panel .esgf-eyebrow {
-      color: rgba(255,255,255,.68);
-    }
-
-    .esgf-gap-panel .esgf-h2 {
-      color: #fff;
-      max-width: 700px;
-    }
-
-    .esgf-gap-panel p {
-      max-width: 700px;
-      margin: 20px 0 0;
-      color: rgba(255,255,255,.78);
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-    .esgf-gap-panel__stat {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,.18);
-    }
-
-    .esgf-gap-panel__stat strong {
-      display: block;
-      color: #fff;
-      font-family: var(--esgf-font-mono);
-      font-size: 32px;
-      font-weight: 500;
-    }
-
-    .esgf-gap-panel__stat span {
-      display: block;
-      margin-top: 4px;
-      color: rgba(255,255,255,.65);
-      font-size: 13px;
-    }
-
-    .esgf-content-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border: 1px solid var(--esgf-rule);
-      border-radius: var(--esgf-radius-md);
-      background: var(--esgf-surface);
-      overflow: hidden;
-    }
-
-    .esgf-content-grid .esgf-content-card {
-      min-height: 250px;
-      border-right: 1px solid var(--esgf-rule);
-    }
-
-    .esgf-content-grid .esgf-content-card:last-child {
-      border-right: 0;
-    }
-
-    .esgf-method-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      padding: 48px;
-      border: 1px solid var(--esgf-rule);
-      border-radius: var(--esgf-radius-md);
-      background: var(--esgf-surface);
-    }
-
-    .esgf-method-card__steps {
-      display: grid;
-      gap: 12px;
-    }
-
-    .esgf-method-step {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 16px;
-      border: 1px solid var(--esgf-rule);
-      border-radius: var(--esgf-radius-sm);
-      background: var(--esgf-paper);
-    }
-
-    .esgf-method-step__number {
-      color: var(--esgf-depth);
-      font-family: var(--esgf-font-mono);
-      font-size: 13px;
-    }
-
-    .esgf-method-step__text {
-      font-weight: 600;
-    }
-
-    .esgf-footer__grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 48px;
-    }
-
-    .esgf-footer__description {
-      max-width: 440px;
-      margin-top: 16px;
-      color: rgba(255,255,255,.68);
-    }
-
-    .esgf-footer__heading {
-      margin: 0 0 16px;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .esgf-footer__links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .esgf-footer__links a {
-      color: rgba(255,255,255,.78);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .esgf-footer__links a:hover {
-      color: #fff;
-    }
-
-    .esgf-footer__bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,.18);
-      color: rgba(255,255,255,.52);
-      font-family: var(--esgf-font-mono);
-      font-size: 11px;
-    }
-
-    @media (max-width: 900px) {
-      .esgf-data-strip__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .esgf-two-column,
-      .esgf-method-card,
-      .esgf-footer__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .esgf-content-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .esgf-content-grid .esgf-content-card {
-        border-right: 0;
-        border-bottom: 1px solid var(--esgf-rule);
-      }
-
-      .esgf-content-grid .esgf-content-card:last-child {
-        border-bottom: 0;
-      }
-
-      .esgf-method-card {
-        gap: 32px;
-        padding: 32px;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .esgf-data-strip__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .esgf-data-strip__item,
-      .esgf-data-strip__item:first-child {
-        padding-left: 0;
-      }
-
-      .esgf-record-preview__header {
-        display: block;
-      }
-
-      .esgf-record-link {
-        display: inline-flex;
-        margin-top: 20px;
-      }
-
-      .esgf-gap-panel {
-        padding: 32px 24px;
-      }
-
-      .esgf-footer__bottom {
-        display: block;
-      }
-
-      .esgf-footer__bottom span {
-        display: block;
-        margin-top: 8px;
-      }
-    }
-  </style>
 
   <script type="application/ld+json">
   {
@@ -412,46 +23,26 @@
     "@type": "NonprofitOrganization",
     "name": "ESG Foundation",
     "url": "https://esgfoundation.org/",
-    "description": "A non-profit knowledge base for environmental, social and governance data.",
-    "logo": "https://esgfoundation.org/assets/img/og-default.png"
+    "description": "A non-profit knowledge base for environmental, social and governance data."
   }
   </script>
 </head>
 
 <body>
 
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
-
   <header class="esgf-header">
     <div class="esgf-container esgf-header__inner">
 
-      <a class="esgf-brand" href="/" aria-label="ESG Foundation home">
-        <img
-          src="assets/img/og-default.png"
-          alt="ESG Foundation"
-          style="max-height:64px;"
-        >
+      <a class="esgf-brand" href="index.html" aria-label="ESG Foundation home">
+        <img src="assets/img/og-default.png" alt="ESG Foundation">
       </a>
 
-      <nav class="esgf-nav" aria-label="Primary navigation">
-
+      <nav class="esgf-nav" aria-label="Main navigation">
         <a href="gcc-benchmark.html">Record</a>
-
-        <a href="keeping-current.html">Method</a>
-
+        <a href="method.html">Method</a>
         <a href="reports-showcase.html">Research</a>
-
         <a href="about.html">About</a>
-
-        <a
-          class="esgf-nav__search"
-          href="gcc-benchmark.html"
-        >
-          Search data
-        </a>
-
+        <a class="esgf-nav__search" href="gcc-benchmark.html">Search data</a>
       </nav>
 
     </div>
@@ -460,151 +51,563 @@
 
   <main>
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
+    <!-- HERO -->
     <section class="esgf-hero">
+
+      <div class="esgf-container esgf-grid">
+
+        <div class="esgf-hero__copy">
+
+          <p class="esgf-eyebrow">
+            ESG Foundation
+          </p>
+
+          <h1 class="esgf-display">
+            Search data.
+          </h1>
+
+          <p class="esgf-lead">
+            Most ESG data sits behind a licence. Ours does not.
+            Search the public record, see where each figure comes from,
+            and see where the data does not exist.
+          </p>
+
+          <form class="esgf-search" action="gcc-benchmark.html" method="get">
+
+            <input
+              type="search"
+              name="q"
+              placeholder="Search a company, supplier or indicator"
+              aria-label="Search ESG data"
+            >
+
+            <button type="submit">
+              Search
+            </button>
+
+          </form>
+
+          <div class="esgf-hero__actions">
+
+            <a class="esgf-button" href="gcc-benchmark.html">
+              Search the record
+            </a>
+
+            <a class="esgf-button esgf-button--secondary" href="method.html">
+              Read the method
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <aside class="esgf-hero__data">
+
+          <article class="esgf-card esgf-card--page">
+
+            <div class="esgf-card__body">
+
+              <p class="esgf-eyebrow">
+                Illustrative record
+              </p>
+
+              <h2 class="esgf-h3">
+                Meridian Textiles
+              </h2>
+
+              <div style="margin-top:20px;">
+
+                <span class="esgf-mono" style="font-size:32px;">
+                  B+
+                </span>
+
+              </div>
+
+              <div class="esgf-card__meta">
+
+                <span>
+                  GB-2026-04817
+                </span>
+
+                <span>
+                  tier 2
+                </span>
+
+              </div>
+
+              <div style="margin-top:20px;">
+
+                <span class="esgf-status esgf-status--verified">
+                  Verified source
+                </span>
+
+                <span class="esgf-status esgf-status--estimated">
+                  2 estimated
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <p class="esgf-mono" style="margin:12px 0 0;color:var(--esgf-mist);">
+            Illustrative record · 2026-09
+          </p>
+
+        </aside>
+
+      </div>
+
+      <div class="esgf-container">
+        <div class="esgf-gradient-rule"></div>
+      </div>
+
+    </section>
+
+
+    <!-- DATA STRIP -->
+    <section class="esgf-data-strip">
+
+      <div class="esgf-container esgf-grid">
+
+        <div class="esgf-data-strip__item" style="grid-column:span 3;">
+          <span class="esgf-data-strip__value">
+            4,200
+          </span>
+          <span class="esgf-data-strip__label">
+            suppliers
+          </span>
+        </div>
+
+        <div class="esgf-data-strip__item" style="grid-column:span 3;">
+          <span class="esgf-data-strip__value">
+            61
+          </span>
+          <span class="esgf-data-strip__label">
+            indicators
+          </span>
+        </div>
+
+        <div class="esgf-data-strip__item" style="grid-column:span 3;">
+          <span class="esgf-data-strip__value">
+            100%
+          </span>
+          <span class="esgf-data-strip__label">
+            source-linked records
+          </span>
+        </div>
+
+        <div class="esgf-data-strip__item" style="grid-column:span 3;">
+          <span class="esgf-data-strip__value">
+            FREE
+          </span>
+          <span class="esgf-data-strip__label">
+            public access
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY -->
+    <section class="esgf-section">
+
+      <div class="esgf-container">
+
+        <p class="esgf-eyebrow">
+          Why this exists
+        </p>
+
+        <h2 class="esgf-h2">
+          ESG data is everywhere. The public record is not.
+        </h2>
+
+        <div class="esgf-grid" style="margin-top:48px;">
+
+          <article class="esgf-card" style="grid-column:span 3;">
+            <div class="esgf-card__body">
+
+              <h3 class="esgf-h3">
+                Open
+              </h3>
+
+              <p>
+                The record is free to read. The method is published alongside it.
+              </p>
+
+            </div>
+          </article>
+
+
+          <article class="esgf-card" style="grid-column:span 3;">
+            <div class="esgf-card__body">
+
+              <h3 class="esgf-h3">
+                Source-linked
+              </h3>
+
+              <p>
+                Figures are connected to the evidence used to record them.
+              </p>
+
+            </div>
+          </article>
+
+
+          <article class="esgf-card" style="grid-column:span 3;">
+            <div class="esgf-card__body">
+
+              <h3 class="esgf-h3">
+                Machine-readable
+              </h3>
+
+              <p>
+                The record is structured so people and machines can query it.
+              </p>
+
+            </div>
+          </article>
+
+
+          <article class="esgf-card" style="grid-column:span 3;">
+            <div class="esgf-card__body">
+
+              <h3 class="esgf-h3">
+                Honest about gaps
+              </h3>
+
+              <p>
+                Where the data does not exist, the record shows the gap.
+              </p>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RECORD PREVIEW -->
+    <section class="esgf-section esgf-section--tight"
+             style="background:var(--esgf-surface);">
 
       <div class="esgf-container">
 
         <div class="esgf-grid">
 
-          <div class="esgf-hero__copy">
+          <div style="grid-column:1 / span 7;">
 
             <p class="esgf-eyebrow">
-              THE OPEN RECORD FOR ESG DATA
+              The record
             </p>
 
-            <h1 class="esgf-display">
-              Search data.
-            </h1>
+            <h2 class="esgf-h2">
+              Start with the evidence.
+            </h2>
 
-            <p class="esgf-hero__support">
-              Most ESG data sits behind a licence. Ours does not.
-              Search the public record, see where each figure comes from,
-              and see where the data does not exist.
+            <p class="esgf-lead">
+              Search organisations, suppliers and indicators.
+              See the source, reporting period and status attached
+              to the information.
             </p>
 
-            <form
-              class="esgf-search"
-              action="gcc-benchmark.html"
-              method="get"
-              role="search"
-            >
-
-              <label
-                class="esgf-search-label"
-                for="esgf-search-input"
-              >
-                Search the record
-              </label>
-
-              <input
-                id="esgf-search-input"
-                name="q"
-                type="search"
-                placeholder="Company, supplier, indicator or source"
-                autocomplete="off"
-              >
-
-              <button type="submit">
-                Search
-              </button>
-
-            </form>
-
-            <div class="esgf-hero__actions">
-
-              <a
-                class="esgf-button"
-                href="gcc-benchmark.html"
-              >
+            <div style="margin-top:32px;">
+              <a class="esgf-button" href="gcc-benchmark.html">
                 Search the record
               </a>
+            </div>
 
-              <a
-                class="esgf-button esgf-button--secondary"
-                href="about.html"
-              >
-                Read the method
+          </div>
+
+
+          <div style="grid-column:9 / span 4;">
+
+            <div class="esgf-card">
+
+              <div class="esgf-card__body">
+
+                <p class="esgf-eyebrow">
+                  Record preview
+                </p>
+
+                <div class="esgf-record">
+
+                  <div>
+                    <div class="esgf-record__name">
+                      Meridian Textiles
+                    </div>
+
+                    <div class="esgf-card__meta">
+                      GB-2026-04817 · tier 2
+                    </div>
+                  </div>
+
+                  <div class="esgf-record__value">
+                    B+
+                  </div>
+
+                  <div>
+                    <span class="esgf-status esgf-status--verified">
+                      Verified
+                    </span>
+                  </div>
+
+                  <div class="esgf-record__value">
+                    2 est.
+                  </div>
+
+                </div>
+
+
+                <div class="esgf-record">
+
+                  <div>
+                    <div class="esgf-record__name">
+                      Example Manufacturing
+                    </div>
+
+                    <div class="esgf-card__meta">
+                      GB-2026-04818 · tier 1
+                    </div>
+                  </div>
+
+                  <div class="esgf-record__value">
+                    —
+                  </div>
+
+                  <div>
+                    <span class="esgf-status esgf-status--nodata">
+                      No data
+                    </span>
+                  </div>
+
+                  <div class="esgf-record__value">
+                    —
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GAP -->
+    <section class="esgf-section">
+
+      <div class="esgf-container">
+
+        <div class="esgf-card esgf-card--page">
+
+          <div class="esgf-card__body">
+
+            <p class="esgf-eyebrow">
+              The gap matters
+            </p>
+
+            <h2 class="esgf-h2">
+              Missing data is data about disclosure.
+            </h2>
+
+            <p class="esgf-lead">
+              A missing disclosure should not quietly become a zero,
+              an estimate or a reassuring blank space. We show where
+              evidence exists and where it does not.
+            </p>
+
+            <div style="margin-top:32px;">
+
+              <a class="esgf-button esgf-button--secondary"
+                 href="method.html">
+                See how we handle gaps
               </a>
 
             </div>
 
           </div>
 
+        </div>
 
-          <!-- HERO DATA CARD -->
+      </div>
 
-          <div class="esgf-hero__data">
+    </section>
 
-            <div class="esgf-hero-record">
 
-              <div class="esgf-hero-record__top">
+    <!-- KNOWLEDGE BASE -->
+    <section class="esgf-section"
+             style="background:var(--esgf-surface);">
 
-                <div>
-                  <p class="esgf-eyebrow">
-                    RECORD EXAMPLE
-                  </p>
+      <div class="esgf-container">
 
-                  <h2 class="esgf-hero-record__name">
-                    Meridian Textiles
-                  </h2>
+        <p class="esgf-eyebrow">
+          Knowledge base
+        </p>
 
-                </div>
+        <h2 class="esgf-h2">
+          The record is bigger than the benchmark.
+        </h2>
 
-                <div
-                  class="esgf-hero-record__score"
-                  aria-label="Example score B plus"
-                >
-                  B+
-                </div>
+        <div class="esgf-grid" style="margin-top:48px;">
 
+
+          <article class="esgf-card" style="grid-column:span 4;">
+
+            <div class="esgf-content-card">
+
+              <div class="esgf-content-card__type">
+                Keeping Current
               </div>
 
-              <div class="esgf-hero-record__rows">
+              <h3 class="esgf-content-card__title">
+                ESG news, disclosures and regulatory developments.
+              </h3>
 
-                <div class="esgf-hero-record__row">
-                  <span class="esgf-hero-record__label">
-                    Record
-                  </span>
-                  <span class="esgf-hero-record__value">
-                    GB-2026-04817
-                  </span>
-                </div>
+              <p class="esgf-content-card__summary">
+                A continuously updated public knowledge stream.
+              </p>
 
-                <div class="esgf-hero-record__row">
-                  <span class="esgf-hero-record__label">
-                    Tier
-                  </span>
-                  <span class="esgf-hero-record__value">
-                    tier 2
-                  </span>
-                </div>
+              <p style="margin:24px 0 0;">
+                <a href="keeping-current.html">
+                  View Keeping Current
+                </a>
+              </p>
 
-                <div class="esgf-hero-record__row">
-                  <span class="esgf-hero-record__label">
-                    Source status
-                  </span>
-                  <span class="esgf-status esgf-status--verified">
-                    Verified source
-                  </span>
-                </div>
+            </div>
 
-                <div class="esgf-hero-record__row">
-                  <span class="esgf-hero-record__label">
-                    Data gaps
-                  </span>
-                  <span class="esgf-hero-record__value">
-                    2 estimated
-                  </span>
-                </div>
+          </article>
 
+
+          <article class="esgf-card" style="grid-column:span 4;">
+
+            <div class="esgf-content-card">
+
+              <div class="esgf-content-card__type">
+                Research
               </div>
 
-              <p class="esgf-mono" style="margin:20px 0 0;color:var(--esgf-mist);">
-                Illustrative record · 2026-09
+              <h3 class="esgf-content-card__title">
+                Reports, benchmarks and evidence-led analysis.
+              </h3>
+
+              <p class="esgf-content-card__summary">
+                Research collected and organised around the public record.
+              </p>
+
+              <p style="margin:24px 0 0;">
+                <a href="reports-showcase.html">
+                  View research
+                </a>
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="esgf-card" style="grid-column:span 4;">
+
+            <div class="esgf-content-card">
+
+              <div class="esgf-content-card__type">
+                Podcasts
+              </div>
+
+              <h3 class="esgf-content-card__title">
+                Conversations across the ESG field.
+              </h3>
+
+              <p class="esgf-content-card__summary">
+                Episodes and discussions preserved as part of the knowledge base.
+              </p>
+
+              <p style="margin:24px 0 0;">
+                <a href="podcast.html">
+                  View podcasts
+                </a>
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- METHOD -->
+    <section class="esgf-section">
+
+      <div class="esgf-container esgf-grid">
+
+        <div style="grid-column:1 / span 7;">
+
+          <p class="esgf-eyebrow">
+            Method
+          </p>
+
+          <h2 class="esgf-h2">
+            The method is part of the record.
+          </h2>
+
+          <p class="esgf-lead">
+            We publish how information is collected, assessed and treated.
+            That includes the places where evidence is incomplete,
+            estimated or disputed.
+          </p>
+
+          <div style="margin-top:32px;">
+
+            <a class="esgf-button" href="method.html">
+              Read the method
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div style="grid-column:9 / span 4;">
+
+          <div class="esgf-card">
+
+            <div class="esgf-card__body">
+
+              <p class="esgf-eyebrow">
+                Four statuses
+              </p>
+
+              <p class="esgf-mono">
+                VERIFIED SOURCE
+              </p>
+
+              <p class="esgf-mono" style="color:var(--esgf-flag);">
+                ESTIMATED
+              </p>
+
+              <p class="esgf-mono" style="color:var(--esgf-alert);">
+                DISPUTED
+              </p>
+
+              <p class="esgf-mono">
+                NO DATA
               </p>
 
             </div>
@@ -613,617 +616,25 @@
 
         </div>
 
-        <div class="esgf-gradient-rule"></div>
-
       </div>
 
     </section>
 
 
-    <!-- =====================================================
-         COVERAGE STRIP
-         ===================================================== -->
+    <!-- ABOUT -->
+    <section class="esgf-section"
+             style="background:var(--esgf-surface);">
 
-    <section class="esgf-data-strip">
+      <div class="esgf-container esgf-grid">
 
-      <div class="esgf-container">
-
-        <div class="esgf-data-strip__grid">
-
-          <div class="esgf-data-strip__item">
-
-            <span class="esgf-data-strip__value">
-              4,200
-            </span>
-
-            <span class="esgf-data-strip__label">
-              suppliers in the public record
-            </span>
-
-          </div>
-
-          <div class="esgf-data-strip__item">
-
-            <span class="esgf-data-strip__value">
-              61
-            </span>
-
-            <span class="esgf-data-strip__label">
-              indicators tracked
-            </span>
-
-          </div>
-
-          <div class="esgf-data-strip__item">
-
-            <span class="esgf-data-strip__value">
-              100%
-            </span>
-
-            <span class="esgf-data-strip__label">
-              source-linked records
-            </span>
-
-          </div>
-
-          <div class="esgf-data-strip__item">
-
-            <span class="esgf-data-strip__value">
-              FREE
-            </span>
-
-            <span class="esgf-data-strip__label">
-              public access to the record
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         WHY THE FOUNDATION EXISTS
-         ===================================================== -->
-
-    <section class="esgf-section">
-
-      <div class="esgf-container">
-
-        <div class="esgf-section-intro">
+        <div style="grid-column:1 / span 8;">
 
           <p class="esgf-eyebrow">
-            WHY THIS EXISTS
+            About
           </p>
 
           <h2 class="esgf-h2">
-            ESG data is not difficult because there is no data.
-          </h2>
-
-          <p class="esgf-lead">
-            It is difficult because the record is fragmented, inconsistent
-            and often hidden behind commercial access.
-          </p>
-
-        </div>
-
-
-        <div class="esgf-two-column">
-
-          <article class="esgf-evidence-card">
-
-            <div class="esgf-evidence-card__number">
-              01
-            </div>
-
-            <h3 class="esgf-h3">
-              We aggregate the record.
-            </h3>
-
-            <p>
-              Disclosures, filings, public reporting, regulatory material,
-              standards and other published evidence are brought into one
-              searchable knowledge base.
-            </p>
-
-          </article>
-
-
-          <article class="esgf-evidence-card">
-
-            <div class="esgf-evidence-card__number">
-              02
-            </div>
-
-            <h3 class="esgf-h3">
-              We publish the method.
-            </h3>
-
-            <p>
-              The Foundation shows how information is sourced, classified
-              and recorded. The method is part of the record, not a black box.
-            </p>
-
-          </article>
-
-
-          <article class="esgf-evidence-card">
-
-            <div class="esgf-evidence-card__number">
-              03
-            </div>
-
-            <h3 class="esgf-h3">
-              We show the gaps.
-            </h3>
-
-            <p>
-              Where a company, supplier or indicator has no public disclosure,
-              that absence is recorded rather than filled with an assumption.
-            </p>
-
-          </article>
-
-
-          <article class="esgf-evidence-card">
-
-            <div class="esgf-evidence-card__number">
-              04
-            </div>
-
-            <h3 class="esgf-h3">
-              We keep evidence visible.
-            </h3>
-
-            <p>
-              Every figure carries a status and a source trail so readers can
-              distinguish verified information, estimates, disputes and gaps.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         RECORD
-         ===================================================== -->
-
-    <section class="esgf-section esgf-record-preview">
-
-      <div class="esgf-container">
-
-        <div class="esgf-record-preview__header">
-
-          <div>
-
-            <p class="esgf-eyebrow">
-              THE RECORD
-            </p>
-
-            <h2 class="esgf-h2">
-              Data should be traceable.
-            </h2>
-
-            <p>
-              A public record is only useful when the evidence behind it
-              can be inspected.
-            </p>
-
-          </div>
-
-          <a
-            class="esgf-button esgf-record-link"
-            href="gcc-benchmark.html"
-          >
-            Explore the record
-          </a>
-
-        </div>
-
-
-        <div class="esgf-card">
-
-          <div class="esgf-card__body">
-
-            <div class="esgf-record">
-
-              <div>
-                <div class="esgf-record__name">
-                  Meridian Textiles
-                </div>
-
-                <div class="esgf-card__meta">
-                  GB-2026-04817 · tier 2
-                </div>
-              </div>
-
-              <div>
-                <div class="esgf-eyebrow" style="margin-bottom:6px;">
-                  STATUS
-                </div>
-
-                <span class="esgf-status esgf-status--verified">
-                  Verified source
-                </span>
-              </div>
-
-              <div>
-                <div class="esgf-eyebrow" style="margin-bottom:6px;">
-                  DATA
-                </div>
-
-                <div class="esgf-record__value">
-                  61 indicators
-                </div>
-              </div>
-
-              <div>
-                <div class="esgf-record__value">
-                  2 estimated
-                </div>
-              </div>
-
-            </div>
-
-
-            <div class="esgf-record">
-
-              <div>
-                <div class="esgf-record__name">
-                  Public disclosure record
-                </div>
-
-                <div class="esgf-card__meta">
-                  source-linked · 2026-09
-                </div>
-              </div>
-
-              <div>
-                <span class="esgf-status esgf-status--estimated">
-                  Estimated
-                </span>
-              </div>
-
-              <div>
-                <div class="esgf-record__value">
-                  2 fields
-                </div>
-              </div>
-
-              <div>
-                <a href="gcc-benchmark.html">
-                  View
-                </a>
-              </div>
-
-            </div>
-
-
-            <div class="esgf-record">
-
-              <div>
-                <div class="esgf-record__name">
-                  Missing disclosure
-                </div>
-
-                <div class="esgf-card__meta">
-                  no public evidence identified
-                </div>
-              </div>
-
-              <div>
-                <span class="esgf-status esgf-status--nodata">
-                  No data
-                </span>
-              </div>
-
-              <div>
-                <div class="esgf-record__value">
-                  1 indicator
-                </div>
-              </div>
-
-              <div>
-                <a href="gcc-benchmark.html">
-                  View
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         THE GAP
-         ===================================================== -->
-
-    <section class="esgf-section esgf-section--tight">
-
-      <div class="esgf-container">
-
-        <div class="esgf-gap-panel">
-
-          <p class="esgf-eyebrow">
-            THE GAP
-          </p>
-
-          <h2 class="esgf-h2">
-            What is not disclosed is part of the record.
-          </h2>
-
-          <p>
-            A missing figure is not permission to invent one. The Foundation
-            records the absence, identifies the source boundary and leaves
-            the gap visible.
-          </p>
-
-          <div class="esgf-gap-panel__stat">
-
-            <strong>
-              NO DISCLOSURE
-            </strong>
-
-            <span>
-              Recorded explicitly rather than silently interpolated.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         RESEARCH / KEEPING CURRENT / PODCASTS
-         ===================================================== -->
-
-    <section class="esgf-section">
-
-      <div class="esgf-container">
-
-        <div class="esgf-section-intro">
-
-          <p class="esgf-eyebrow">
-            THE KNOWLEDGE BASE
-          </p>
-
-          <h2 class="esgf-h2">
-            The record keeps moving.
-          </h2>
-
-          <p class="esgf-lead">
-            Research, reporting, regulatory developments and conversations
-            are tracked alongside the underlying evidence.
-          </p>
-
-        </div>
-
-
-        <div class="esgf-content-grid">
-
-          <article class="esgf-content-card">
-
-            <div class="esgf-content-card__type">
-              KEEPING CURRENT
-            </div>
-
-            <h3 class="esgf-content-card__title">
-              What is changing in ESG reporting, regulation and disclosure?
-            </h3>
-
-            <p class="esgf-content-card__summary">
-              Current developments with the source, date and context kept visible.
-            </p>
-
-            <p style="margin-top:24px;">
-              <a href="keeping-current.html">
-                Read Keeping Current →
-              </a>
-            </p>
-
-          </article>
-
-
-          <article class="esgf-content-card">
-
-            <div class="esgf-content-card__type">
-              RESEARCH
-            </div>
-
-            <h3 class="esgf-content-card__title">
-              Reports and research behind the record.
-            </h3>
-
-            <p class="esgf-content-card__summary">
-              Published research organised around evidence, methodology and source.
-            </p>
-
-            <p style="margin-top:24px;">
-              <a href="reports-showcase.html">
-                Explore research →
-              </a>
-            </p>
-
-          </article>
-
-
-          <article class="esgf-content-card">
-
-            <div class="esgf-content-card__type">
-              PODCASTS
-            </div>
-
-            <h3 class="esgf-content-card__title">
-              Conversations across the ESG field.
-            </h3>
-
-            <p class="esgf-content-card__summary">
-              Episodes and discussions linked back to the original source.
-            </p>
-
-            <p style="margin-top:24px;">
-              <a href="podcast.html">
-                Explore podcasts →
-              </a>
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         METHOD
-         ===================================================== -->
-
-    <section class="esgf-section">
-
-      <div class="esgf-container">
-
-        <div class="esgf-method-card">
-
-          <div>
-
-            <p class="esgf-eyebrow">
-              METHOD
-            </p>
-
-            <h2 class="esgf-h2">
-              The method is part of the product.
-            </h2>
-
-            <p class="esgf-lead">
-              We publish how the record is assembled, how sources are treated,
-              how evidence is classified and where uncertainty remains.
-            </p>
-
-            <div style="margin-top:32px;">
-
-              <a
-                class="esgf-button"
-                href="about.html"
-              >
-                Read the method
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="esgf-method-card__steps">
-
-            <div class="esgf-method-step">
-
-              <div class="esgf-method-step__number">
-                01
-              </div>
-
-              <div class="esgf-method-step__text">
-                Source
-              </div>
-
-            </div>
-
-
-            <div class="esgf-method-step">
-
-              <div class="esgf-method-step__number">
-                02
-              </div>
-
-              <div class="esgf-method-step__text">
-                Classify
-              </div>
-
-            </div>
-
-
-            <div class="esgf-method-step">
-
-              <div class="esgf-method-step__number">
-                03
-              </div>
-
-              <div class="esgf-method-step__text">
-                Verify
-              </div>
-
-            </div>
-
-
-            <div class="esgf-method-step">
-
-              <div class="esgf-method-step__number">
-                04
-              </div>
-
-              <div class="esgf-method-step__text">
-                Publish
-              </div>
-
-            </div>
-
-
-            <div class="esgf-method-step">
-
-              <div class="esgf-method-step__number">
-                05
-              </div>
-
-              <div class="esgf-method-step__text">
-                Show the gap
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         ABOUT / BOILERPLATE
-         ===================================================== -->
-
-    <section class="esgf-section esgf-section--tight">
-
-      <div class="esgf-container">
-
-        <div class="esgf-section-intro">
-
-          <p class="esgf-eyebrow">
-            ABOUT ESG FOUNDATION
-          </p>
-
-          <h2 class="esgf-h2">
-            An open record for the ESG field.
+            The open record for ESG data.
           </h2>
 
           <p class="esgf-lead">
@@ -1234,6 +645,15 @@
             Where data does not exist, we publish the gap.
           </p>
 
+          <div style="margin-top:32px;">
+
+            <a class="esgf-button esgf-button--secondary"
+               href="about.html">
+              About ESG Foundation
+            </a>
+
+          </div>
+
         </div>
 
       </div>
@@ -1243,136 +663,41 @@
   </main>
 
 
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
-
   <footer class="esgf-footer">
 
     <div class="esgf-container">
 
-      <div class="esgf-footer__grid">
-
-        <div>
-
-          <div class="esgf-footer__brand">
-            ESG Foundation
-          </div>
-
-          <p class="esgf-footer__description">
-            The open record for ESG data.
-            We aggregate the data, publish the method,
-            and show the gaps.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <p class="esgf-footer__heading">
-            Explore
-          </p>
-
-          <div class="esgf-footer__links">
-
-            <a href="gcc-benchmark.html">
-              Record
-            </a>
-
-            <a href="keeping-current.html">
-              Method
-            </a>
-
-            <a href="reports-showcase.html">
-              Research
-            </a>
-
-            <a href="podcast.html">
-              Podcasts
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <p class="esgf-footer__heading">
-            Foundation
-          </p>
-
-          <div class="esgf-footer__links">
-
-            <a href="about.html">
-              About
-            </a>
-
-            <a href="awards.html">
-              Awards
-            </a>
-
-            <a href="join-us.html">
-              Join us
-            </a>
-
-            <a href="contact.html">
-              Contact
-            </a>
-
-            <a href="privacy.html">
-              Privacy
-            </a>
-
-            <a href="terms.html">
-              Terms
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="esgf-footer__brand">
+        ESG Foundation
       </div>
 
+      <p>
+        Non-profit ESG knowledge base. We aggregate the data,
+        publish the method, and show the gaps. Free to read.
+      </p>
 
-      <div class="esgf-footer__bottom">
-
-        <span>
-          ESG FOUNDATION · REGISTERED NON-PROFIT
-        </span>
-
-        <span>
-          PAGE 1 OF 1 · 2026-09-18
-        </span>
-
-      </div>
+      <p class="esgf-mono">
+        esgfoundation.org · 2026
+      </p>
 
     </div>
 
   </footer>
 
 
-  <!-- =======================================================
-       SIMPLE SEARCH HANDLING
-       ======================================================= -->
-
   <script>
-    (function () {
-      const form = document.querySelector('.esgf-search');
-
-      if (!form) return;
-
-      form.addEventListener('submit', function (event) {
-        const input = document.getElementById('esgf-search-input');
+    document.querySelectorAll('.esgf-search').forEach(function(form) {
+      form.addEventListener('submit', function(event) {
+        var input = form.querySelector('input[name="q"]');
 
         if (!input || !input.value.trim()) {
           event.preventDefault();
-          input.focus();
+          if (input) input.focus();
         }
       });
-    })();
+    });
   </script>
 
 </body>
 </html>
+```
