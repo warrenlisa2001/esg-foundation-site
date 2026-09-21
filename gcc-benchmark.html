@@ -1,4 +1,688 @@
 <!DOCTYPE html>
+/* =========================================================
+   ESG FOUNDATION — GCC BENCHMARK / RECORD
+   FINAL VISUAL OVERRIDE
+   Presentation only — do not alter benchmark functionality.
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFFFFF !important;
+  color: #041B3D !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+}
+
+body,
+p,
+li,
+td,
+th,
+label,
+input,
+select,
+button {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  color: #041B3D !important;
+}
+
+a {
+  color: #0057D6;
+}
+
+a:hover {
+  color: #041B3D;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  position: relative !important;
+  top: auto !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #DCE4EF !important;
+  box-shadow: none !important;
+  z-index: 50;
+}
+
+.site-header .nav {
+  width: min(1180px, calc(100% - 48px)) !important;
+  min-height: 76px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.site-header .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #041B3D !important;
+  text-decoration: none !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+}
+
+.site-header .brand-mark {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  background: #0070F8 !important;
+  color: #FFFFFF !important;
+  border-radius: 6px !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.03em !important;
+}
+
+.site-header .brand-name {
+  color: #041B3D !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.02em !important;
+}
+
+.site-header .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 30px !important;
+}
+
+.site-header .nav-links a {
+  color: #44546B !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active {
+  color: #041B3D !important;
+}
+
+.site-header .nav-right {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.site-header .nav-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px !important;
+  padding: 10px 18px !important;
+  border-radius: 6px !important;
+  background: #041B3D !important;
+  color: #FFFFFF !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.site-header .nav-cta:hover {
+  background: #0057D6 !important;
+  color: #FFFFFF !important;
+}
+
+.site-header .mobile-cta {
+  display: none !important;
+}
+
+
+/* ---------- OLD HERO / BENCHMARK HERO ---------- */
+
+body > .hero,
+.hero,
+.benchmark-hero,
+.page-hero {
+  background: #FFFFFF !important;
+  color: #041B3D !important;
+  border-bottom: 1px solid #DCE4EF !important;
+  box-shadow: none !important;
+}
+
+.hero::before,
+.hero::after,
+.benchmark-hero::before,
+.benchmark-hero::after,
+.page-hero::before,
+.page-hero::after {
+  display: none !important;
+}
+
+.hero h1,
+.benchmark-hero h1,
+.page-hero h1 {
+  color: #041B3D !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -.035em !important;
+}
+
+.hero p,
+.benchmark-hero p,
+.page-hero p {
+  color: #44546B !important;
+}
+
+
+/* ---------- OLD DARK BACKGROUNDS ---------- */
+
+.bg-dark,
+.dark,
+.dark-section,
+.section-dark,
+.benchmark-dark,
+.hero-dark {
+  background: #FFFFFF !important;
+  color: #041B3D !important;
+}
+
+.bg-dark *,
+.dark *,
+.dark-section *,
+.section-dark *,
+.benchmark-dark *,
+.hero-dark * {
+  color: inherit;
+}
+
+
+/* ---------- RECORD INTRO ---------- */
+
+.record-intro {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #DCE4EF !important;
+  padding: 72px 0 64px !important;
+}
+
+.record-intro .container {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+}
+
+.record-intro-copy {
+  max-width: 820px !important;
+}
+
+.record-eyebrow {
+  color: #0057D6 !important;
+}
+
+.record-intro h1 {
+  color: #041B3D !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -.035em !important;
+}
+
+.record-lede {
+  color: #44546B !important;
+}
+
+
+/* ---------- RECORD PRINCIPLES ---------- */
+
+.record-principles {
+  background: #F6F8FB !important;
+  border-bottom: 1px solid #DCE4EF !important;
+}
+
+.record-principles .container {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+}
+
+.record-principle h3 {
+  color: #041B3D !important;
+}
+
+.record-principle p {
+  color: #44546B !important;
+}
+
+.record-principle-number {
+  color: #7C8CA3 !important;
+}
+
+
+/* ---------- OLD PROOF STRIP ---------- */
+
+.proof-strip,
+.proof,
+.features-strip,
+.trust-strip,
+.benchmark-proof,
+.hero-proof {
+  background: #F6F8FB !important;
+  color: #041B3D !important;
+  border-top: 1px solid #DCE4EF !important;
+  border-bottom: 1px solid #DCE4EF !important;
+  box-shadow: none !important;
+}
+
+.proof-strip *,
+.proof *,
+.features-strip *,
+.trust-strip *,
+.benchmark-proof *,
+.hero-proof * {
+  color: #041B3D !important;
+}
+
+.proof-strip h3,
+.proof h3,
+.features-strip h3,
+.trust-strip h3,
+.benchmark-proof h3,
+.hero-proof h3 {
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.proof-strip p,
+.proof p,
+.features-strip p,
+.trust-strip p,
+.benchmark-proof p,
+.hero-proof p {
+  color: #44546B !important;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+main,
+main.container,
+.container {
+  max-width: 1180px;
+}
+
+section {
+  box-shadow: none !important;
+}
+
+main {
+  background: #FFFFFF !important;
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
+
+section h2 {
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.025em !important;
+  color: #041B3D !important;
+}
+
+section h3 {
+  font-family: 'Archivo', system-ui, sans-serif !important;
+  color: #041B3D !important;
+}
+
+
+/* ---------- SEARCH / FILTER AREA ---------- */
+
+.search,
+.search-box,
+.search-panel,
+.filters,
+.filter-bar,
+.controls,
+.benchmark-controls {
+  background: #FFFFFF !important;
+  border: 1px solid #DCE4EF !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+input,
+select,
+textarea {
+  background: #FFFFFF !important;
+  color: #041B3D !important;
+  border: 1px solid #DCE4EF !important;
+  border-radius: 6px !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+}
+
+input::placeholder {
+  color: #7C8CA3 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #0070F8 !important;
+  outline-offset: 2px !important;
+  border-color: #0070F8 !important;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+button,
+.btn,
+.button,
+.search-button,
+.submit-button {
+  border-radius: 6px !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+button.primary,
+.btn-primary,
+.button-primary,
+.search-button {
+  background: #041B3D !important;
+  color: #FFFFFF !important;
+  border-color: #041B3D !important;
+}
+
+button.primary:hover,
+.btn-primary:hover,
+.button-primary:hover,
+.search-button:hover {
+  background: #0057D6 !important;
+  border-color: #0057D6 !important;
+}
+
+
+/* ---------- BENCHMARK TABLE ---------- */
+
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #DCE4EF !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+thead {
+  background: #F6F8FB !important;
+}
+
+thead th {
+  padding: 15px 16px !important;
+  border-bottom: 1px solid #DCE4EF !important;
+  color: #041B3D !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-align: left !important;
+}
+
+tbody td {
+  padding: 16px !important;
+  border-bottom: 1px solid #EAF0F7 !important;
+  color: #44546B !important;
+  background: #FFFFFF !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+  font-size: 14px !important;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+tbody tr:hover td {
+  background: #F6F8FB !important;
+}
+
+tbody td strong,
+tbody td b {
+  color: #041B3D !important;
+  font-weight: 700 !important;
+}
+
+
+/* ---------- SCORES ---------- */
+
+.score,
+.score-value,
+.rating,
+.disclosure-score {
+  color: #0057D6 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 500 !important;
+}
+
+
+/* ---------- DATA LABELS ---------- */
+
+.data-label,
+.meta,
+.metadata,
+.caption,
+.source,
+.date,
+.updated {
+  color: #7C8CA3 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 12px !important;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.card,
+.panel,
+.record-card,
+.benchmark-card {
+  background: #FFFFFF !important;
+  border: 1px solid #DCE4EF !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+
+/* ---------- LINKS ---------- */
+
+main a,
+section a {
+  color: #0057D6;
+}
+
+main a:hover,
+section a:hover {
+  color: #041B3D;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  background: #041B3D !important;
+  color: #FFFFFF !important;
+  border-top: 0 !important;
+  margin-top: 80px !important;
+}
+
+footer *,
+footer p,
+footer li,
+footer span {
+  color: #FFFFFF !important;
+}
+
+footer a {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: #5FC2F8 !important;
+}
+
+footer h3,
+footer h4 {
+  color: #FFFFFF !important;
+  font-family: 'Archivo', system-ui, sans-serif !important;
+}
+
+footer .container {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+}
+
+
+/* ---------- REMOVE OLD DECORATIVE EFFECTS ---------- */
+
+.gradient,
+.gradient-bg,
+.glow,
+.glow-effect,
+.decorative,
+.blob,
+.mesh,
+.noise {
+  box-shadow: none !important;
+}
+
+img {
+  box-shadow: none !important;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 760px) {
+
+  .site-header .nav {
+    width: calc(100% - 32px) !important;
+    min-height: 68px !important;
+  }
+
+  .site-header .nav-links {
+    gap: 18px !important;
+  }
+
+  .site-header .nav-links a {
+    font-size: 13px !important;
+  }
+
+  .site-header .nav-right {
+    display: none !important;
+  }
+
+  .site-header .mobile-cta {
+    display: inline-flex !important;
+  }
+
+  .record-intro {
+    padding: 52px 0 48px !important;
+  }
+
+  .record-intro .container,
+  .record-principles .container,
+  footer .container {
+    width: calc(100% - 32px) !important;
+  }
+
+  .record-intro h1 {
+    font-size: 42px !important;
+  }
+
+  .record-lede {
+    font-size: 17px !important;
+  }
+
+  .record-principles-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+}
+
+
+/* ---------- ACCESSIBILITY ---------- */
+
+:focus-visible {
+  outline: 2px solid #0070F8 !important;
+  outline-offset: 2px !important;
+}
+
+
+/* ---------- BRAND COLOUR OVERRIDES ---------- */
+
+.text-blue,
+.text-primary,
+.primary-text {
+  color: #0057D6 !important;
+}
+
+.bg-blue,
+.bg-primary,
+.primary-bg {
+  background: #0070F8 !important;
+}
+
+.text-dark,
+.text-navy {
+  color: #041B3D !important;
+}
+
+
+/* ---------- PREVENT OLD INTER / FRAUNCES LOOK ---------- */
+
+body,
+body * {
+  font-synthesis: none;
+}
+
+.brand,
+.brand *,
+.nav,
+.nav *,
+.nav-links *,
+.nav-right * {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+}
+
+.brand-name,
+.brand-mark,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Archivo', system-ui, sans-serif !important;
+}
 <html lang="en">
 <head>
 <meta charset="UTF-8">
