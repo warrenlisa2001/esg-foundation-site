@@ -1,1 +1,57 @@
-[]
+name: Draft Keeping Current article from ESG Today
+
+on:
+  schedule:
+    # Runs once a day at 06:00 UTC. Change the cron expression to adjust frequency.
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+    # ^ lets you trigger this manually from the Actions tab in GitHub, for testing.
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests feedparser anthropic
+
+      - name: Run drafting script
+        id: draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python automation/draft_article.py
+
+      # If the script found no new, un-drafted story, it makes no file changes.
+      # create-pull-request simply does nothing in that case — no empty PR is opened.
+      - name: Open Pull Request for review
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Draft: new Keeping Current article from ESG Today feed"
+          branch: auto/keeping-current-draft
+          delete-branch: true
+          title: "[Review before merging] New Keeping Current draft"
+          body: |
+            This article was drafted automatically from the ESG Today RSS
+            feed (https://www.esgtoday.com/feed/) and has **not** been
+            fact-checked or published.
+
+            Before merging:
+            - [ ] Confirm the summary accurately reflects the source article
+            - [ ] Confirm the category tag is correct
+            - [ ] Check the source link works
+            - [ ] Update the "More from Keeping Current" links if needed
+            - [ ] Update the story count on keeping-current.html if you keep a running total
+
+            Merging this PR is what publishes it to the live site.
